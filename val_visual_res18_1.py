@@ -36,7 +36,7 @@ with control_placeholder:
 # 4. 圖片檢索邏輯 (使用相對路徑，方便上傳 GitHub)
 # 建議將圖片放在專案資料夾下的 figures 子資料夾
 fd = 'figures/' 
-search_pattern = fd + f"*layer{layer}_{dataset}_class{classlist}_epoch{epoch}_sub{sub_sampling}*.png"
+search_pattern = fd + f"*layer{layer}_{dataset}_class{classlist}_epoch{epoch}_sub*{sub_sampling}*.png"
 matching_files = glob.glob(search_pattern)
 
 # 5. 在上方區塊顯示大圖
