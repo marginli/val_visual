@@ -29,7 +29,7 @@ with control_placeholder:
     with c3:
         epoch = st.selectbox('Epoch', [1,2,3,4,5,6,7,8,9,10,11,14,15,16,20,21,26,28,29,30,31,32,35,39], index=15)
     with c4:
-        sub_sampling = st.selectbox('Sub Sampling', ['25_25','36_36','25_50','36_50','50_50','16_16','64_64','81_81','100_100'], index=4)
+        sub_sampling = st.selectbox('Sub Sampling', ['_50_','25_25','36_36','25_50','36_50','50_50','16_16','64_64','81_81','100_100'], index=4)
     with c5:
         classlist = st.text_input("Class List", value="0123456789")
 
