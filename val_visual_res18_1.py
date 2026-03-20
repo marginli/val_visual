@@ -43,11 +43,12 @@ matching_files = glob.glob(search_pattern)
 with image_placeholder:
     st.title("ResNet-18 Validations")
     if matching_files:
-        image_path = matching_files[0]
-        # 顯示搜尋到的完整檔名，方便確認
-        st.write(f"📂 `{os.path.basename(image_path)}`")
-        # use_container_width=True 會讓圖片寬度自動適應你的螢幕寬度
-        st.image(image_path, use_container_width=True)
+        for image_path in matching_files:
+            #image_path = matching_files[0]
+            # 顯示搜尋到的完整檔名，方便確認
+            st.write(f"📂 `{os.path.basename(image_path)}`")
+            # use_container_width=True 會讓圖片寬度自動適應你的螢幕寬度
+            st.image(image_path, use_container_width=True)
     else:
         st.error("❌ 無法找到匹配的圖片，請檢查下方參數組合。")
 
